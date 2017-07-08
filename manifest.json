@@ -1,0 +1,6 @@
+{
+  "name": "taxant-bot",
+  "short_name": "taxant-bot",
+  "start_url": "/",
+  "display": "standalone"
+}

@@ -1,0 +1,32 @@
+<link rel="import" href="../bower_components/polymer/polymer-element.html">
+
+
+<!-- sample-content included for demo purposes only -->
+<link rel="import" href="../bower_components/app-layout/demo/sample-content.html">
+<dom-module id="my-content">
+    <template>
+        
+    <sample-content size="10"></sample-content>
+    </template>
+     <script>
+        /**
+         * @customElement
+         * @polymer
+         */
+        class MyContent extends Polymer.Element {
+            static get is() {
+                return 'my-content';
+            }
+            static get properties() {
+                return {
+                    prop1: {
+                        type: String,
+                        value: 'my-content'
+                    }
+                };
+            }
+        }
+
+        window.customElements.define(MyContent.is, MyContent);
+    </script>
+</dom-module>

@@ -1,0 +1,66 @@
+<link rel="import" href="../bower_components/polymer/polymer-element.html">
+
+
+<link rel="import" href="../bower_components/app-layout/app-layout.html">
+<link rel="import" href="../bower_components/paper-icon-button/paper-icon-button.html">
+<link rel="import" href="../bower_components/iron-icons/iron-icons.html">
+<link rel="import" href="../bower_components/iron-icon/iron-icon.html">
+
+<link rel="import" href="../bower_components/iron-flex-layout/iron-flex-layout-classes.html">
+
+
+<dom-module id="my-header">
+    <script src="../bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+
+
+    <template>
+    <style>
+      app-toolbar {
+          /* Toolbar is the main header, so give it some color */
+          background-color: #1E88E5;
+          font-family: 'Roboto', Helvetica, sans-serif;
+          color: white;
+          --app-toolbar-font-size: 20px;
+/*            position: fixed;
+            top: 0; left: 0;
+            width: 100%;
+            height: 100px;*/
+        }
+        app-header{
+            padding: 0px;
+        }
+    </style>
+    <app-header fixed shadow>
+        <app-toolbar >
+            <paper-icon-button icon="menu"></paper-icon-button>
+            <div main-title>Tax</div>
+            <paper-icon-button icon="delete"></paper-icon-button>
+            <paper-icon-button icon="search"></paper-icon-button>
+            <paper-icon-button icon="close"></paper-icon-button>
+        </app-toolbar>
+    </app-header>
+    
+  </template>
+
+    <script>
+        /**
+         * @customElement
+         * @polymer
+         */
+        class MyHeader extends Polymer.Element {
+            static get is() {
+                return 'my-header';
+            }
+            static get properties() {
+                return {
+                    prop1: {
+                        type: String,
+                        value: 'my-header'
+                    }
+                };
+            }
+        }
+
+        window.customElements.define(MyHeader.is, MyHeader);
+    </script>
+</dom-module>
